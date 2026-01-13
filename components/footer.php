@@ -1,3 +1,3 @@
 <footer>
-	<p> This is the footer </p>
+	<p> Copyright © 2026 Devin Delaney </p>
 </footer>

@@ -1,6 +1,12 @@
+<head>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
 <header>
-	<h1>
-		This is the header
-	</h1>
-	<?php include "nav.php" ?>
+	<a id="header-name" href="/">
+		Devin Delaney
+	</a>
+	<div class="link-banner">
+		<?php include "nav.php" ?>
+		<?php include "socials.php" ?>
+	</div>
 </header>
