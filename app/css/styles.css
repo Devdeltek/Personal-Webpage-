@@ -4,7 +4,11 @@
 	--accent1-color: #B8C4A9;
 	--accent2-color: #D97D55;
 	--default-margin: 10px;
+	--content-width: 800px;
+	--menu-padding: 5vw;
 }
+
+
 
 * {
 	margin: 0px;
@@ -21,10 +25,23 @@ body {
 header, footer {
 	color: var(--bg-color);
 	background-color: var(--container-color);
+	padding-left: var(--menu-padding);
+	padding-right: var(--menu-padding);
 }
 
 footer {
 	margin-top: auto;
+}
+
+main {
+	margin: 0 auto;
+	width: 800px;
+}
+
+@media screen and (max-width: 880px){
+	main {
+		width: 90vw;
+	}
 }
 
 a, p, h1, h2, h3 {
@@ -44,10 +61,6 @@ a:hover {
 	color: #F96E5B;
 }
 
-address {
-	margin-left: auto;
-}
-
 #header-name {
 	color: var(--background-color);
 	font-size: 2.5rem;
@@ -55,7 +68,10 @@ address {
 
 .link-banner {
 	display: flex;
+	justify-content: space-between;
 	background-color: var(--accent1-color);
+	padding-left: var(--menu-padding);
+	padding-right: var(--menu-padding);
 }
 
 .flat-list {
@@ -65,4 +81,8 @@ address {
 
 ul.flat-list li {
 	list-style: none;
+}
+
+.project-card {
+	
 }
