@@ -6,5 +6,11 @@
 		<li>
 			<a href = "/projects"><b>Projects</b></a>
 		</li>
+		<li>
+			<a href = "/games"><b>Games</b></a>
+		</li>
+		<li>
+			<a href = "/misc"><b>Misc</b></a>
+		</li>
 	</ul>
 </nav>

@@ -4,8 +4,9 @@
 	--accent1-color: #B8C4A9;
 	--accent2-color: #D97D55;
 	--default-margin: 10px;
-	--content-width: 800px;
-	--menu-padding: 5vw;
+	--min-width: 250px;
+	--content-width: clamp(var(--min-width), 90vw, 800px);
+	--menu-padding: calc(10px + max((100vw - 1200px)/2, 0px));
 }
 
 
@@ -20,28 +21,23 @@ body {
 	flex-direction: column;
 	background-color: var(--bg-color);
 	font-family: "calibri";
+	min-width: 350px;
 }
 
 header, footer {
 	color: var(--bg-color);
 	background-color: var(--container-color);
-	padding-left: var(--menu-padding);
-	padding-right: var(--menu-padding);
+	padding: 0px var(--menu-padding);
 }
 
 footer {
 	margin-top: auto;
+	text-align: center;
 }
 
 main {
 	margin: 0 auto;
-	width: 800px;
-}
-
-@media screen and (max-width: 880px){
-	main {
-		width: 90vw;
-	}
+	width: var(--content-width);
 }
 
 a, p, h1, h2, h3 {
@@ -69,9 +65,11 @@ a:hover {
 .link-banner {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	background-color: var(--accent1-color);
 	padding-left: var(--menu-padding);
 	padding-right: var(--menu-padding);
+	border-radius: 0px 0px 6px 6px;
 }
 
 .flat-list {
@@ -83,6 +81,18 @@ ul.flat-list li {
 	list-style: none;
 }
 
+@media screen and (max-width: 450px){
+	header {
+		text-align: center;
+	}
+
+}
+
+.project-holder {
+	display: grid;
+}
+
 .project-card {
-	
+	width: 500px;
+	height: 500px;
 }
