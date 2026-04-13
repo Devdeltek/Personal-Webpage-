@@ -3,25 +3,20 @@
 	--container-color: #6FA4AF;
 	--accent1-color: #B8C4A9;
 	--accent2-color: #D97D55;
-	--default-margin: 10px;
-	--min-width: 250px;
+	--text-margin: 10px;
+	--min-width: 300px;
 	--content-width: clamp(var(--min-width), 90vw, 800px);
 	--menu-padding: calc(10px + max((100vw - 1200px)/2, 0px));
 }
 
-
-
-* {
-	margin: 0px;
-}
-
 body {
+	margin: 0px;
 	min-height:100vh;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--bg-color);
-	font-family: "calibri";
-	min-width: 350px;
+	font-family: "arial";
+	min-width: var(--min-width);
 }
 
 header, footer {
@@ -40,10 +35,6 @@ main {
 	width: var(--content-width);
 }
 
-a, p, h1, h2, h3 {
-	margin: var(--default-margin);
-}
-
 h1 {
 	text-align: center;
 }
@@ -57,12 +48,16 @@ a:hover {
 	color: #F96E5B;
 }
 
+address {
+	font-style: normal;
+}
+
 #header-name {
-	color: var(--background-color);
+	color: var(--bg-color);
 	font-size: 2.5rem;
 }
 
-.link-banner {
+#link-banner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -72,27 +67,37 @@ a:hover {
 	border-radius: 0px 0px 6px 6px;
 }
 
+.icon {
+	height: 1.25rem;
+}
+
 .flat-list {
 	display: flex;
+	margin: 0px;
 	padding: 0px;
 }
 
-ul.flat-list li {
+ul.flat-list > li {	
 	list-style: none;
+	margin: 5px;
+}
+
+.fancy-list > li {
+	border-top: 3px solid var(--accent1-color);
+	border-bottom: 3px solid var(--accent1-color);
+	list-style-type: none;
+	border-radius: 40px 40px 40px 40px;
+	padding: 10px;
+}
+
+.project-card {
+	padding: 5px;
+	border-bottom: 2px solid var(--accent1-color);
 }
 
 @media screen and (max-width: 450px){
 	header {
 		text-align: center;
-	}
-
+	}	
 }
 
-.project-holder {
-	display: grid;
-}
-
-.project-card {
-	width: 500px;
-	height: 500px;
-}
